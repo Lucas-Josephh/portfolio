@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && xcopy public\\images dist\\mon-portfolio\\images /E /I /Y",
+    "build": "ng build",
+    "deploy": "ng build --configuration production --base-href=/portfolio/ && ng deploy --base-href=/portfolio/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
