@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && xcopy public\\images dist\\mon-portfolio\\images /E /I /Y",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
