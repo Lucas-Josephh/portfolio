@@ -1,0 +1,300 @@
+a {
+    text-decoration: none;
+}
+
+.app-home {
+    &-card {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        gap: 20px;
+    }
+
+    &-mobile {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &-element {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            height: 180px;
+            border: 1px solid rgb(83, 83, 83, 0.5);
+            border-radius: 6px;
+            transform: translateY(0);
+            animation: show 1s ease-in-out;
+
+            &_img {
+                width: 100%;
+                border-radius: 8px;
+                margin-bottom: 12px;
+            }
+
+            &_paragraphe {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 12px;
+            }
+
+            &_btn {
+                border-radius: 50px;
+                border: 1px solid rgb(214, 0, 214);
+                width: 100px;
+                height: 30px;
+                cursor: pointer;
+            }
+        }
+
+        &-enable {
+            width: 50%;
+            height: 120px;
+            border-radius: 6px;
+            margin-bottom: 3%;
+            padding: 20px 0;
+            border: 1px solid rgb(83, 83, 83, 0.5);
+            background-color: white;
+
+            &_title {
+                display: flex;
+                justify-content: center;
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+                font-size: 40px;
+            }
+
+            &-active {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 6px;
+                margin: 2% 0 2%;
+
+                &_points {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    background-color: green;
+                }
+
+                &_border {
+                    width: 60%;
+                    border-radius: 6px;
+                    height: 0;
+                    border: 2px solid green;
+                }
+            }
+
+            &_description {
+                display: flex;
+                justify-content: center;
+                font-size: 26px;
+            }
+
+            &-status {
+                border: 2px solid black;
+                background-color: rgb(240, 240, 240);
+                color: green;
+                border-radius: 50px;
+                font-size: 18px;
+                width: max-content;
+                padding: 6px 18px 6px 18px;
+
+                &_point {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    background-color: green;
+                }
+            }
+        }
+    }
+
+    &-presentation {
+        background-color: rgb(235, 235, 235);
+        padding: 1% 0 1% 1%;
+        &_title {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-size: 60px;
+            color: rgb(83, 83, 83);
+        }
+
+        &-container {
+            display: flex;
+            align-items: center;
+                &_objectif {
+                    margin-top: 20px;
+                    width: 50%;
+                    font-size: 30px;
+                    font-family: "Alan Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-style: normal;
+                    color: rgb(45, 45, 45);
+                }
+            &-img {
+
+                display: flex;
+                gap: 160px;
+                margin: 0 80px 90px;
+
+                &_portable {
+                    width: 300px;
+                }
+            }
+        }
+
+        &_personel {
+            font-size: 26px;
+            font-family: "Alan Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            width: 70%;
+            color: rgb(83, 83, 83);
+            margin-top: 10px;
+        }
+    }
+
+    &-redirect {
+        display: flex;
+        margin: 2% 0 0 16%;
+        gap: 40px;
+        &-button {
+            width: max-content;
+            height: 36px;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            border: 2px solid rgb(0, 0, 0, 0.2);
+            display: flex;
+            gap: 6px;
+            align-items: center;
+
+            &_project {
+                background-color: rgb(211, 137, 0);
+            }
+
+            &_project:hover, &_skill:hover, &_contact:hover {
+                animation: enlarge 200ms ease-in-out;
+                transform: scale(1.1);
+            }
+            &_project:not(:hover), &_skill:not(:hover), &_contact:not(:hover) {
+                animation: narrowed 200ms ease-in-out;
+                transform: scale(1);
+            }
+
+            &_skill {
+                background-color: rgb(220, 100, 176);
+            }
+
+            &_contact {
+                background-color:rgb(36, 36, 255);
+            }
+        }
+    }
+}
+
+@media (min-width: 0) and (max-width: 1366px) {
+    
+    .mobile_phone {
+        font-size: 10px;
+    }
+    
+    .app-home {
+
+        &-redirect {
+            margin: 20px 0 0 0;
+            gap: 4px;
+            &-button{
+                width: 130px;
+
+                &_contact {
+                    width: 100px;
+                }
+            }
+        }
+
+        &-element {
+            &-info {
+                width: 90px;
+                height: 116px;
+
+                &_paragraphe {
+                    font-size: 12px;
+                }
+
+                &_btn {
+                    width: 60px;
+                    height: 20px;
+                }
+            }
+
+            &-enable {
+                height: 50px;
+                &_title {
+                    font-size: 20px;
+                }
+
+                &-active {
+                    &_border {
+                        width: 40%;
+                    }              
+                }
+
+                &_description {
+                    font-size: 16px;
+                }
+            }
+        }
+        &-pc {
+            display: none;
+        }
+        &-presentation {
+            &_title {
+                font-size: 28px;
+            }
+
+            &-container {
+                display: inline;
+                &_objectif {
+                    width: 100%;
+                    font-size: 18px;
+                }
+            }
+
+            &_personel {
+                font-size: 16px;
+                top: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1367px) {
+    .app-home {
+        &-mobile {
+            display: none;
+        }
+    }
+}
+
+@keyframes show {
+    0%{
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

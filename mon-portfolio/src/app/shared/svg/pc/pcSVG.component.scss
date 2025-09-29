@@ -1,0 +1,26 @@
+.app-pc {
+    display: flex;
+
+    &_portable {
+        position: absolute;
+        width: 300px;
+    }
+    &_content {
+        width: 237px;
+        height: 150px;
+        margin: 5% 0 0 14%;
+        z-index: 998;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1366px) {
+    .app-pc {
+        display: none;
+        &_portable {
+            width: 200px;
+        }
+        &_content {
+            width: 158PX;
+        }
+    }
+}
