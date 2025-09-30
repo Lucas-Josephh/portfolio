@@ -1,0 +1,1 @@
+import{a}from"./chunk-HDGRZ4UP.js";import{g as o,j as n}from"./chunk-B7O4U5MZ.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-about"]],decls:1,vars:0,consts:[["page","about"]],template:function(e,s){e&1&&n(0,"extranet-navbar",0)},dependencies:[a],encapsulation:2})};export{p as AboutComponent};
