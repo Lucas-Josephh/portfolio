@@ -2,14 +2,10 @@ import { CommonModule, NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'extranet-svg-mail',
+  selector: 'extranet-svg-phone',
   imports: [CommonModule, NgClass],
   standalone: true,
-  templateUrl: './mailSVG.component.html',
-  styleUrls: ['./mailSVG.component.scss']
+  templateUrl: './phoneSVG.component.html',
+  styleUrls: ['./phoneSVG.component.scss']
 })
-export class MailSVGComponent {
-
-  @Input() size = '' ;
-
-}
+export class PhoneSVGComponent {}
