@@ -1,3 +1,5 @@
+@import url('../../shared/navbar/navbar.component.scss');
+
 a {
     text-decoration: none;
 }
@@ -20,38 +22,6 @@ a {
         display: flex;
         align-items: center;
         justify-content: space-around;
-
-        &-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 180px;
-            height: 180px;
-            border: 1px solid rgb(83, 83, 83, 0.5);
-            border-radius: 6px;
-            transform: translateY(0);
-            animation: show 1s ease-in-out;
-
-            &_img {
-                width: 100%;
-                border-radius: 8px;
-                margin-bottom: 12px;
-            }
-
-            &_paragraphe {
-                font-size: 18px;
-                font-weight: bold;
-                margin-bottom: 12px;
-            }
-
-            &_btn {
-                border-radius: 50px;
-                border: 1px solid rgb(214, 0, 214);
-                width: 100px;
-                height: 30px;
-                cursor: pointer;
-            }
-        }
 
         &-enable {
             width: 50%;
@@ -257,9 +227,6 @@ a {
                     font-size: 16px;
                 }
             }
-        }
-        &-pc {
-            display: none;
         }
         &-presentation {
             &_title {
