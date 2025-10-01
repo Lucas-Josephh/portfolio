@@ -20,8 +20,17 @@
                         align-items: center;
                         width: 70px;
                         height: 70px;
-                        border: 1px solid gray;
+                        border: 3px solid rgb(196, 91, 53);
+                        background-color: rgb(231, 108, 63);
+                        border-radius: 8px;
                         margin-top: 30px;
+                        cursor: pointer;
+                        transition: transform 300ms ease-in-out
+                    }
+
+                    &_logo:hover {
+                        
+                        transform: translateY(-8px);
                     }
                 }
 
