@@ -5,14 +5,21 @@
 
         &-profil {
             width: 23%;
+            margin-top: 4%;
             &-container {
                 display: flex;
                 flex-direction: column;
-                margin-top: 10%;
 
                 &-medias {
                     display: flex;
                     justify-content: space-around;
+
+                    &_logo {
+                        width: 70px;
+                        height: 70px;
+                        border: 1px solid gray;
+                        margin-top: 30px;
+                    }
                 }
 
                 &_img {
@@ -44,8 +51,9 @@
                 margin-bottom: 30px;
             }
 
-            &_paragraphe {
+            &_firstparagraphe {
                 text-align: left;
+                font-size: 20px;
             }
 
             &_title::after {
@@ -61,12 +69,31 @@
 
         &-activitie {
             width: 23%;
+            margin-top: 4%;
             &_test {
                 width: 100%;
                 height: 80px;
                 border: 1px solid gray;
-                margin-top: 10%;
             }      
+        }
+
+        &-part {
+            display: flex;
+            justify-content: flex-end;
+            &_secondparagraphe {
+                margin-top: 40px;
+                margin-left: 1%;
+                width: 75%;
+                font-size: 18px;
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+            }
+        }
+
+        &-skill {
+            display: flex;
+            justify-content: space-around;
         }
     }
 }
