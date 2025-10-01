@@ -1,0 +1,72 @@
+.app-about {
+    &-container {
+        display: flex;
+        justify-content: space-around;
+
+        &-profil {
+            width: 23%;
+            &-container {
+                display: flex;
+                flex-direction: column;
+                margin-top: 10%;
+
+                &-medias {
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                &_img {
+                    width: 100%;
+                    height: 300px;
+                    border: 1px solid gray;
+                }
+            }
+        }
+
+        &-page {
+            margin-top: 4%;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            text-align: center;
+            width: 50%;
+
+            &_title {
+                color: rgb(74, 74, 74);
+                margin-left: 10%;
+                position: relative;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                width: 600px;
+            }
+
+            &_subtitle {
+                margin-bottom: 30px;
+            }
+
+            &_paragraphe {
+                text-align: left;
+            }
+
+            &_title::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 25%;
+                width: 50%;
+                height: 1px;
+                background-color: rgb(189, 0, 189, 0.4);
+            }
+        }
+
+        &-activitie {
+            width: 23%;
+            &_test {
+                width: 100%;
+                height: 80px;
+                border: 1px solid gray;
+                margin-top: 10%;
+            }      
+        }
+    }
+}
