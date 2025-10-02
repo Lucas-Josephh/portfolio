@@ -1,9 +1,9 @@
-import { CommonModule, NgClass } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'extranet-svg-phone',
-  imports: [CommonModule, NgClass],
+  imports: [CommonModule],
   standalone: true,
   templateUrl: './phoneSVG.component.html',
   styleUrls: ['./phoneSVG.component.scss']
