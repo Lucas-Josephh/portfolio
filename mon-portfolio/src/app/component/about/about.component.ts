@@ -5,11 +5,11 @@ import { LinkedInSVGComponent } from '../../shared/svg/linkedIn/linkedInSVG.comp
 import { GithubSVGComponent } from '../../shared/svg/github/githubSVG.component';
 import { MailSVGComponent } from '../../shared/svg/mail/mailSVG.component';
 import { PhoneSVGComponent } from '../../shared/svg/phone/phoneSVG.component';
-import { NgClass } from '@angular/common';
+import { CardComponent } from '../../shared/card/card.component';
 
 @Component({
   selector: 'app-about',
-  imports: [NavbarComponent, NgClass, BookComponent, LinkedInSVGComponent, GithubSVGComponent, MailSVGComponent, PhoneSVGComponent],
+  imports: [NavbarComponent, CardComponent, BookComponent, LinkedInSVGComponent, GithubSVGComponent, MailSVGComponent, PhoneSVGComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
@@ -21,5 +21,4 @@ export class AboutComponent {
   showActivities() : void {
     this.isHide = !this.isHide;
   }
-
 }
