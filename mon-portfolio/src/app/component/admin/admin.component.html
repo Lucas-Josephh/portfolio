@@ -1,0 +1,111 @@
+<extranet-navbar page="/admin" />
+
+<div class="app-admin">
+    <h1 class="app-admin-title">Administration</h1>
+    <h2 class="app-admin_subtitle">Gérez vos projets et compétences</h2>
+
+    <div class="app-admin-stats">
+        <div class="app-admin-stats-project">
+            <div class="app-admin-stats-project-container">
+                <div class="app-admin-stats-project-container-count">
+                    <h2 class="app-admin-stats-project-container-count_title">Total Projets</h2>
+                    <span class="app-admin-stats-project-container-count_number">5</span>
+                </div>
+                <div class="app-admin-stats-project-container_svg"></div>
+            </div>
+        </div>
+        <div class="app-admin-stats-skill">
+            <div class="app-admin-stats-skill-container">
+                <div class="app-admin-stats-skill-container-count">
+                    <h2 class="app-admin-stats-skill-container-count_title">Total Compétences</h2>
+                    <span class="app-admin-stats-skill-container-count_number">5</span>
+                </div>
+                <div class="app-admin-stats-skill-container_svg"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-admin-option">
+        <button class="app-admin-option_btn" (click)="selectedOption(false)" [class.app-admin-option_project]="!select">Projets</button>
+        <button class="app-admin-option_btn" (click)="selectedOption(true)" [class.app-admin-option_skill]="select">Compétences</button>
+    </div>
+
+    <div class="app-admin-data" [class.app-admin-data-skill]="select">
+        <div class="app-admin-data-head"  [class.app-admin-data-head-skill]="select">
+            @if(!select) {
+                <h1 class="app-admin-data-head_title">Gestion des Projets</h1>
+                <button class="app-admin-data-head-project_btn" (click)="addNewProject()">+ Nouveau Projet</button>
+            } @else {
+                <h1 class="app-admin-data-head_title">Gestion des Compétences</h1>
+                <button class="app-admin-data-head-skill_btn" (click)="addNewSkill()">+ Nouvelle Compétences</button>
+            }
+            
+        </div>
+        
+        <div class="app-admin-data-range">
+            @if(!select) {
+                @if(!newProject) {
+                    <div class="app-admin-data-range-form">
+                        <extranet-dataProject (sendNewProperties)="sendNewProperties($event)" [update]="update" [id]="id" /> 
+                    </div>
+                }
+                <div class="app-admin-data-range-container">
+                    <table class="app-admin-data-range-container-table">
+                        <thead class="app-admin-data-range-container-table-head">
+                            <tr>
+                                <th class="app-admin-data-range-container-table-head_title">Titre</th>
+                                <th>Status</th>
+                                <th>Technologies</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="app-admin-data-range-container-table-body app-admin-data-range-container-table-body-blue" #project>
+                            @for(project of data; track $index) {
+                                <tr>
+                                    <td class="app-admin-data-range-container-table-body_element">{{project.title}}</td>
+                                    <td class="app-admin-data-range-container-table-body_element"><div class="app-admin-data-range-container-table-body_status"><extranet-status status="{{project.status}}" /></div></td>
+                                    <td class="app-admin-data-range-container-table-body_element"><div class="app-admin-data-range-container-table-body_status"><extranet-tech lib="{{project.technologie}}" /></div></td>
+                                    <td class="app-admin-data-range-container-table-body_element app-admin-data-range-container-table-body-action">
+                                        <button class="app-admin-data-range-container-table-body-action_btn" (click)="editProject(project.id_project)"></button>
+                                        <button class="app-admin-data-range-container-table-body-action_btn" (click)="removeData(project.id_project)"></button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            } @else {
+                @if(!newSkill) {
+                    <div class="app-admin-data-range-form">
+                        <extranet-dataSkill (sendNewProperties)="sendNewProperties($event)" [update]="update" [id]="id" /> 
+                    </div>
+                }
+                <div class="app-admin-data-range-container" [class.app-admin-data-range-container-skill]="select">
+                    <table class="app-admin-data-range-container-table">
+                        <thead class="app-admin-data-range-container-table-head">
+                            <tr>
+                                <th class="app-admin-data-range-container-table-head_title">Nom</th>
+                                <th>Catégorie</th>
+                                <th>Niveau</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="app-admin-data-range-container-table-body app-admin-data-range-container-table-body-purple">
+                            @for(skill of data; track $index) {
+                                <tr>
+                                    <td class="app-admin-data-range-container-table-body_element">{{skill.name}}</td>
+                                    <td class="app-admin-data-range-container-table-body_element"><div class="app-admin-data-range-container-table-body_status"><extranet-categorie lib="{{skill.categorie}}" /></div></td>
+                                    <td class="app-admin-data-range-container-table-body_element">{{skill.level}}</td>
+                                    <td class="app-admin-data-range-container-table-body_element">
+                                        <button class="app-admin-data-range-container-table-body-action_btn" (click)="editSkill(skill.id_skill)"></button>
+                                        <button class="app-admin-data-range-container-table-body-action_btn" (click)="removeData(skill.id_skill)"></button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>

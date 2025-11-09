@@ -1,0 +1,15 @@
+@media (max-width: 990px) {
+  .app-contact-body {
+    flex-direction: column;
+  }
+
+  .app-contact-body-info, .app-contact-body-form {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 660px) {
+    .app-contact-body-form-container-name {
+        flex-direction: column;
+    }
+}

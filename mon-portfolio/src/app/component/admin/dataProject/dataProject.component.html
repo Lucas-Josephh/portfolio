@@ -1,0 +1,51 @@
+<form class="extranet-dataProject-data" [formGroup]="projectForm">
+    <div class="extranet-dataProject-data-container">
+        <div class="extranet-dataProject-data-container-multiple">
+            <div class="extranet-dataProject-data-container-multiple_element">
+                <label class="extranet-dataProject-data-container_label" for="title">* Titre</label>
+                <input class="extranet-dataProject-data-container_input" formControlName="title" placeholder="Nom du projet" required />
+            </div>
+            <div class="extranet-dataProject-data-container-multiple_element">
+                <label class="extranet-dataProject-data-container_label" for="status">* Status</label>
+                <input class="extranet-dataProject-data-container_input" formControlName="status" placeholder="Terminé" required />
+            </div>
+        </div>
+
+        <div class="extranet-dataProject-data-container-multiple_element">
+            <label class="extranet-dataProject-data-container_label" for="description">* Description</label>
+            <textarea class="extranet-dataProject-data-container_area" formControlName="description" placeholder="Description détaillée du projet" required></textarea>
+        </div>
+
+        <div class="extranet-dataProject-data-container-multiple_element">
+            <label class="extranet-dataProject-data-container_label" for="url">* URL de l'image</label>
+            <input class="extranet-dataProject-data-container_input" formControlName="url" placeholder="https://..." required />
+        </div>
+
+        <div class="extranet-dataProject-data-container-multiple_element">
+            <label class="extranet-dataProject-data-container_label" for="technologie">* Technologies</label>
+            <input class="extranet-dataProject-data-container_input" formControlName="technologie" placeholder="React, Nodejs, etc." required />
+        </div>
+
+        <div class="extranet-dataProject-data-container-multiple">
+            <div class="extranet-dataProject-data-container-multiple_element">
+                <label class="extranet-dataProject-data-container_label" for="demo">Lien Démo</label>
+                <input class="extranet-dataProject-data-container_input" formControlName="demo" placeholder="https://demon.example.com" />
+            </div>
+            <div class="extranet-dataProject-data-container-multiple_element">
+                <label class="extranet-dataProject-data-container_label" for="github">Lien Github</label>
+                <input class="extranet-dataProject-data-container_input" formControlName="github" placeholder="https://github.com/..." />
+            </div>
+        </div>
+
+        <input type="hidden" formControlName="id_project" />
+
+        <div class="extranet-dataProject-data-container-btn">
+            <button class="extranet-dataProject-data-container-btn_cancel" type="button" (click)="newProject()">Annuler</button>
+            @if(!update) {
+                <button class="extranet-dataProject-data-container-btn_create" type="submit" (click)="actionProject()">Créer</button>
+            } @else {
+                <button class="extranet-dataProject-data-container-btn_create" type="submit" (click)="actionProject()">Mettre à jour</button>
+            }
+        </div>
+    </div>
+</form>

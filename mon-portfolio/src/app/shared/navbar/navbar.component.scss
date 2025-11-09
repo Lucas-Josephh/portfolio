@@ -1,0 +1,99 @@
+@use "../../../var.scss" as var;
+@use "../../../styles.scss" as style;
+@use "../../media/navbar.media.scss" as media;
+
+.extranet-navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 17%;
+    background-color: var.$background-element;
+    border-right: var.$border-blue;
+    transition: transform 300ms ease-in-out;
+
+    &-container  {
+        margin: 40px 20px 20px 20px;
+
+        &-head {
+            display: flex;
+            flex-direction: column;
+            &_title {
+                background: linear-gradient(135deg, #22d3ee, #a855f7);
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                line-height: 2rem;
+                font-size: 26px;
+                font-weight: bold;
+            }
+
+            &_subtitle {
+                font-size: 14px;
+                color: var.$color-gray;
+                font-weight: normal;
+                line-height: 1.25rem;
+            }
+        }
+
+        &-element {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            margin-top: 60px;
+            gap: 8px;
+
+            &_li, &_li_prj {
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                width: 90%;
+                height: 50px;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &_prj {
+                    padding: 0;
+                }
+
+                span, extranet-svg-profil, extranet-svg-skill, extranet-svg-project, extranet-svg-contact, extranet-svg-admin {
+                    text-decoration: none;
+                    color: rgb(156 163 175);
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    background: rgba(42, 42, 42, 0.4);
+                    span, extranet-svg-profil, extranet-svg-skill, extranet-svg-project, extranet-svg-contact, extranet-svg-admin {
+                        color: rgb(34, 211, 238);
+                    }
+                }
+            }
+        }
+    }
+    
+    &_selected {
+        background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(168, 85, 247, 0.1));
+        border-left: 2px solid rgb(34, 211, 238);
+        span, extranet-svg-profil, extranet-svg-skill, extranet-svg-project, extranet-svg-contact, extranet-svg-admin {
+            color: rgb(34, 211, 238);
+        }
+    }
+}
+
+.extranet-nav {
+    transform: translate(0);
+
+    &-menu {
+        position: fixed;
+        right: 4%;
+        top: 4%;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid rgb(128, 128, 128, 0.3);
+        background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(168, 85, 247, 0.1));
+        cursor: pointer;
+    }
+}

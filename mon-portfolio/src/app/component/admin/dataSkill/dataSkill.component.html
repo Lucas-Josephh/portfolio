@@ -1,0 +1,35 @@
+<form class="extranet-dataSkill-data" [formGroup]="skillForm">
+    <div class="extranet-dataSkill-data-container">
+        <div class="extranet-dataSkill-data-container-multiple">
+            <div class="extranet-dataSkill-data-container-multiple_element">
+                <label class="extranet-dataSkill-data-container_label" for="name">* Nom de la compétence</label>
+                <input class="extranet-dataSkill-data-container_input" formControlName="name" placeholder="React, Python, etc." required />
+            </div>
+            <div class="extranet-dataSkill-data-container-multiple_element">
+                <label class="extranet-dataSkill-data-container_label" for="categorie">* Catégorie</label>
+                <input class="extranet-dataSkill-data-container_input" formControlName="categorie" placeholder="Frontend" required />
+            </div>
+        </div>
+
+        <div class="extranet-dataSkill-data-container-multiple_element">
+            <label class="extranet-dataSkill-data-container_label" for="level">* Niveau de maitrise: </label>
+            <textarea class="extranet-dataSkill-data-container_area" formControlName="level" placeholder="Description détaillée du projet" required></textarea>
+        </div>
+
+        <input type="hidden" formControlName="id_skill" />
+
+        <div class="extranet-dataSkill-data-container-multiple_element">
+            <label class="extranet-dataSkill-data-container_label" for="icone">Icône</label>
+            <input class="extranet-dataSkill-data-container_input" placeholder="Nom de l'îcone" />
+        </div>
+
+        <div class="extranet-dataSkill-data-container-btn">
+            <button class="extranet-dataSkill-data-container-btn_cancel" (click)="newSkill()">Annuler</button>
+            @if(!update) {
+                <button class="extranet-dataSkill-data-container-btn_create" type="submit" (click)="actionSkill()">Créer</button>
+            } @else {
+                <button class="extranet-dataSkill-data-container-btn_create" type="submit" (click)="actionSkill()">Mettre à jour</button>
+            }
+        </div>
+    </div>
+</form>

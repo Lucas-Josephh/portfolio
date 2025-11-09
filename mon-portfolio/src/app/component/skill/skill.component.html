@@ -1,0 +1,25 @@
+<extranet-navbar page="/skill" />
+
+<div class="app-skill">
+    <h1 class="app-skill-title">Mes <span class="app-skill-title_text">Compétences</span></h1>
+    <h2 class="app-skill_subtitle">Technologies et outils que je maîtrise pour créer des solutions innovantes</h2>
+    <div class="app-skill-element">
+
+        @for(proj of objectEntries(projects); track $index) {
+            @let color = proj.value[0]?.color;
+            
+            <div>
+                <div class="app-skill-element-title">
+                    <div class="app-skill-element-title-icon app-skill-{{color}}">
+                        <div class="app-skill-element-title-icon_background"></div>
+                    </div>
+                    <h1 class="app-skill-element-title_text">{{proj.key}}</h1>
+                </div>
+                <div class="app-skill-element-data">
+                    @for(skill of proj.value; track $index) {
+                        <extranet-note name="{{skill.name}}" level="{{skill.level}}" color="{{skill.color}}" />
+                    }
+                </div>
+            </div>
+        }
+</div>

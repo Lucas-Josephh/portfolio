@@ -1,0 +1,18 @@
+<nav class="extranet-navbar" [class.extranet-nav]="isShow">
+    <div class="extranet-navbar-container">
+        <div class="extranet-navbar-container-head">
+            <span class="extranet-navbar-container-head_title">Portfolio</span>
+            <span class="extranet-navbar-container-head_subtitle">Développeur Fullstack</span>
+        </div>
+
+        <ul class="extranet-navbar-container-element">
+            <li routerLink="/" class="extranet-navbar-container-element_li" [class.extranet-navbar_selected]="page == '/'"><extranet-svg-profil /><span>À propos</span></li>
+            <li routerLink="/skill" class="extranet-navbar-container-element_li" [class.extranet-navbar_selected]="page == '/skill'"><extranet-svg-skill /><span>Compétences</span></li>
+            <li routerLink="/project" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/project'"><extranet-svg-project /><span>Projet</span></li>
+            <li routerLink="/contact" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/contact'"><extranet-svg-contact /><span>Contact</span></li>
+            <li routerLink="/admin" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/admin'"><extranet-svg-admin /><span>Admin</span></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="extranet-nav-menu" (click)="showNavBar()"></div>
