@@ -1,0 +1,1 @@
+import{j as i,m as o,na as n}from"./chunk-O5PF7Z2S.js";var p=class r{constructor(e){this.http=e}baseUrl="http://localhost:3000";getData(e,t){let a={table:e};return t&&(a.id=t),this.http.get(`${this.baseUrl}/getData`,{params:a})}static \u0275fac=function(t){return new(t||r)(o(n))};static \u0275prov=i({token:r,factory:r.\u0275fac,providedIn:"root"})};export{p as a};
