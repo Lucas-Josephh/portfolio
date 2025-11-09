@@ -1,57 +1,48 @@
-<extranet-navbar page=""/>
+<extranet-navbar page="/" />
 
 <div class="app-home">
-    <div class="app-home-element">
-        <div class="app-home-element-enable">
-            <h1 class="app-home-element-enable_title">Alternance</h1>
-            <div class="app-home-element-enable-active">
-                <span class="app-home-element-enable-active_points"></span>
-                <span class="app-home-element-enable-active_points"></span>
-                <span class="app-home-element-enable-active_points"></span>
-                <span class="app-home-element-enable-active_border"></span>
-                <span class="app-home-element-enable-active_points"></span>
-                <span class="app-home-element-enable-active_points"></span>
-                <span class="app-home-element-enable-active_points"></span>
+    <div class="app-home-header">
+        <img class="app-home-header_img" src="/profil.jpg" alt="profil">
+        <div class="app-home-header-description">
+            <h1 class="app-home-header-description-title"><span class="app-home-header-description-title_white">Bonjour, je suis</span> <span class="app-home-header-description-title_degrade"> JOSEPH Lucas</span></h1>
+            <h2 class="app-home-header-description_subtitle">Développeur Full Stack passionné par la conception et la réalisation de service web</h2>
+            
+            <div class="app-home-header-description-btn">
+                <button class="app-home-header-description-btn_link"></button>
+                <button class="app-home-header-description-btn_link"></button>
+                <a href="http://localhost:4200/contact" class="app-home-header-description-btn_contact">Me contacter</a>
             </div>
-            <p class="app-home-element-enable_description">Développeur Angular</p>
         </div>
     </div>
 
-    <div class="app-home-mobile">
-        <div class="app-home-element-info">
-            <img class="app-home-element-info_img" src="git.webp" alt="">
-            <p class="app-home-element-info_paragraphe">Voir mes projets</p>
-            <button class="app-home-element-info_btn"><extranet-svg-arrow /></button>
+    <div class="app-home-body">
+        <div class="app-home-body-card">
+            <extranet-card lib="Paris, France" title="Localisation"> 
+                <extranet-svg-localisation localisation />
+            </extranet-card>
+            
+            <extranet-card lib="5+ années" title="Expérience">
+                <extranet-svg-experience experience />
+            </extranet-card>
+            <extranet-card lib="50+ réalisés" title="Projets">
+                <extranet-svg-code project />
+            </extranet-card>
         </div>
-        <div class="app-home-element-info">
-            <img class="app-home-element-info_img" src="linkedin.png" alt="">
-            <p class="app-home-element-info_paragraphe">Voir mon parcour</p>
-            <button class="app-home-element-info_btn"><extranet-svg-arrow /></button>
-        </div>
-    </div>
-
-    <div class="app-home-presentation">
-        <h1 class="app-home-presentation_title">Bonjour,</h1>
-        <div class="app-home-presentation-container">
-            <p class="app-home-presentation-container_objectif">Alternant développeur Angular,
-                mon objectif est de monter en compétences en développement web et de proposer des solutions
-                efficaces, attractives et professionnelles afin d’optimiser au mieux l’expérience utilisateur.
-            </p>
-            <div class="app-home-presentation-container-img">
-                <extranet-svg-pc img="presentation_ts.png" />
-                <extranet-svg-pc img="presentation_2.png" />
+        <div class="app-home-body-about">
+            <div class="app-home-body-about-content">
+                <h1 class="app-home-body-about-content_title">À propos de moi</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At molestias porro autem odit, fuga deleniti vitae quas impedit veritatis delectus veniam magnam asperiores, aliquid neque hic unde. Tenetur molestias doloribus nostrum velit. Eaque earum, nostrum illum doloremque sed quas accusantium ut, quae recusandae explicabo vero optio, voluptatibus eum odio tempora!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At molestias porro autem odit, fuga deleniti vitae quas impedit veritatis delectus veniam magnam asperiores, aliquid neque hic unde. Tenetur molestias doloribus nostrum velit. Eaque earum, nostrum illum doloremque sed quas accusantium ut, quae recusandae explicabo vero optio, voluptatibus eum odio tempora!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At molestias porro autem odit, fuga deleniti vitae quas impedit veritatis delectus veniam magnam asperiores, aliquid neque hic unde. Tenetur molestias doloribus nostrum velit. Eaque earum, nostrum illum doloremque sed quas accusantium ut, quae recusandae explicabo vero optio, voluptatibus eum odio tempora!</p>
+                
+                <div class="app-home-body-about-content-tag">
+                    <extranet-tag lib="Responsif"/>
+                    <extranet-tag lib="Créatif"/>
+                    <extranet-tag lib="Innovation"/>
+                    <extranet-tag lib="Agilité"/>
+                    <extranet-tag lib="Performance"/>
+                </div>
             </div>
         </div>
-        <p class="app-home-presentation_personel">
-            Je suis avant tout passionné par le développement web, j’aime relever les défis, découvrir
-            de nouvelles fonctionnalités et me statisfait de la création de service web.
-        </p>
-
-    <div class="app-home-redirect">
-        <button class="app-home-redirect-button app-home-redirect-button_project"><extranet-svg-book /> <span class="mobile_phone">Voir mes projets</span></button>
-        <button class="app-home-redirect-button app-home-redirect-button_skill"><extranet-svg-code /> <span class="mobile_phone">Voir mes compétences</span></button>
-        <a routerLink="/contact">
-            <button class="app-home-redirect-button app-home-redirect-button_contact"><extranet-svg-mail size="small" /> <span class="mobile_phone">Me contacter</span></button>
-        </a>
     </div>
 </div>

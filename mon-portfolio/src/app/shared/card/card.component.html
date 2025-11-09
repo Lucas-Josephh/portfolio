@@ -1,0 +1,11 @@
+<div class="app-card">
+    <div class="app-card-container">
+        <div class="app-card-container-svg">
+            <ng-content select="[project]"></ng-content>
+            <ng-content select="[experience]"></ng-content>
+            <ng-content select="[localisation]"></ng-content>
+        </div>
+        <h3 class="app-card-container_title">{{title}}</h3>
+        <span class="app-card-container_text">{{lib}}</span>
+    </div>
+</div>

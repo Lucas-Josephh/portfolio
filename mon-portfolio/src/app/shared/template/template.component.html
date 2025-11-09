@@ -1,0 +1,18 @@
+<div class="extranet-template">
+    <img class="extranet-template-img" src="{{url}}" />
+    <div class="extranet-template-container">
+        <h1 class="extranet-template-container_title">{{title}}</h1>
+        <p class="extranet-template-container_description">{{description}}</p>
+        <extranet-tech lib="{{technologie}}" />
+
+        <div class="extranet-template-container-btn">
+            @if(demo !== "") {
+                <a href="{{demo}}" class="extranet-template-container-btn_redirect">Démo</a>
+            }
+            
+            @if(github != "") {
+                <a href="{{github}}" class="extranet-template-container-btn_redirect">Github</a>
+            }
+        </div>
+    </div>
+</div>

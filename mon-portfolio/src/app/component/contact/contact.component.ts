@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { MailSVGComponent } from '../../shared/svg/mail/mail.component';
+import { GithubSVGComponent } from '../../shared/svg/github/github.component';
+import { LinkedInSVGComponent } from '../../shared/svg/linkedin/linkedin.component';
 
 @Component({
   selector: 'app-contact',
-  imports: [NavbarComponent],
+  imports: [NavbarComponent, MailSVGComponent, GithubSVGComponent, LinkedInSVGComponent],
+  standalone: true,
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
-
 export class ContactComponent {
 
   public sendEmail(e: Event) {

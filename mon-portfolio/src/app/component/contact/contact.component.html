@@ -1,46 +1,63 @@
-<extranet-navbar page="contact" />
+<extranet-navbar page="/contact" />
 
 <div class="app-contact">
-    <div class="app-contact-container">
-        <form class="app-contact-container-content" (submit)="sendEmail($event)">
-            <h1 class="app-contact-container-content_title">Formulaire de contact</h1>
-        
-            <div class="app-contact-container-content-name">
-                <div class="app-contact-container-content-name-identity">
-                    <label class="app-contact-container-content-name-identity_label" for="name">Prénom</label>
-                    <input class="app-contact-container-content-name-identity_input" type="text" name="name" placeholder="Saisir un prénom" required>
-                </div>
+    <div class="app-contact-head">
+        <h1 class="app-contact-head_title">Contactez-moi</h1>
+        <h2 class="app-contact-head_subtitle">Une idée ? Un projet ? Discutons-en ensemble</h2>
+    </div>
 
-                <div class="app-contact-container-content-name-identity">
-                    <label class="app-contact-container-content-name-identity_label" for="surname">Nom</label>
-                    <input class="app-contact-container-content-name-identity_input" type="text" name="surname" placeholder="Saisir un nom" required>
-                </div>
-            </div>
-
-            <div class="app-contact-container-content-case">
-                <div class="app-contact-container-content-case-position">
-                    <label class="app-contact-container-content-case-position_label" for="mail">E-mail</label>
-                    <input class="app-contact-container-content-case-position_input" type="email" name="mail" placeholder="Saisir un e-mail" required>
+    <div class="app-contact-body">
+        <div class="app-contact-body-info">
+            <div class="app-contact-body-info-email">
+                <div class="app-contact-body-info-email-container">
+                    <div class="app-contact-body-info-email-container-head">
+                        <div class="app-contact-body-info-email-container-head_svg"><extranet-svg-mail/></div>
+                        <h1 class="app-contact-body-info-email-container-head_title">Email</h1>
+                    </div>
+                    <p class="app-contact-body-info-email-container_name">lucasjo661@gmail.com</p>
                 </div>
             </div>
 
-            <div class="app-contact-container-content-case">
-                <div class="app-contact-container-content-case-position">
-                    <label class="app-contact-container-content-case-position_label" for="objet">Objet</label>
-                    <input class="app-contact-container-content-case-position_input" type="text" name="objet" placeholder="Saisir un objet" required>
+            <div class="app-contact-body-info-link">
+                <div class="app-contact-body-info-link-container">
+                    <h1 class="app-contact-body-info-link-container_title">Réseaux sociaux</h1>
+                    <div class="app-contact-body-info-link-container-redirect">
+                        <a class="app-contact-body-info-link-container-redirect_network" href="https://github.com/Lucas-Josephh"><extranet-svg-github />Github</a>
+                        <a class="app-contact-body-info-link-container-redirect_network" href="https://www.linkedin.com/in/lucas-joseph-8b8472374/"><extranet-svg-linkedin />LinkedIn</a>
+                    </div>
                 </div>
             </div>
+            <div class="app-contact-body-info-enable">
+                <p class="app-contact-body-info-enable_description">
+                    Je suis toujours ouvert à de nouvelles opportunités et collaborations. N'hésitez pas à me contacter !
+                </p>
+            </div>
+        </div>
+        <div class="app-contact-body-form">
+            <form class="app-contact-body-form-container" (submit)="sendEmail($event)">
+                <div class="app-contact-body-form-container-name">
+                    <div class="app-contact-body-form-container-name-field">
+                        <label class="app-contact-body_label" for="name">Nom complet</label>
+                        <input class="app-contact-body_input" name="name" type="text" placeholder="Jean Dupont" required />
+                    </div>
 
-            <div class="app-contact-container-content-case">
-                <div class="app-contact-container-content-case-position">
-                    <label class="app-contact-container-content-case-position_label" for="message">Message</label>
-                    <textarea class="app-contact-container-content-case-position_textarea" name="message" required></textarea>
+                    <div class="app-contact-body-form-container-name-field">
+                        <label class="app-contact-body_label" for="surname">Email</label>
+                        <input class="app-contact-body_input" name="surname" type="text" placeholder="jean@example.com" required />
+                    </div>
                 </div>
-            </div>
-            <div class="app-contact-container-content-send">
-                <input class="app-contact-container-content-send_button" type="submit" value="Envoyer le message" required>
-                <p class="app-contact-container-content-send_condition"><input type="checkbox" required> J'accepte que mon e-mail soit stocké pour apporter une réponse future.</p>
-            </div>
-        </form>
+                <div class="app-contact-body-form-container-name-field">
+                    <label class="app-contact-body_label" for="theme">Sujet</label>
+                    <input class="app-contact-body_input" name="objet" type="text" placeholder="Profil intéressant" required />
+                </div>
+
+                <div class="app-contact-body-form-container-name-field">
+                    <label class="app-contact-body_label" for="message">Message</label>
+                    <textarea class="app-contact-body_area" name="message" id="message" placeholder="Parlons de votre profil..."></textarea>
+                </div>
+                
+                <input type="submit" class="app-contact-body_submit" value="Envoyer le message"/>
+            </form>
+        </div>
     </div>
 </div>

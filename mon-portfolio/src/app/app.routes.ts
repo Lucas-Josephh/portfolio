@@ -7,13 +7,23 @@ export const routes: Routes = [
       import('./component/home/home.component').then(m => m.HomeComponent)
   },
   {
+    path: 'skill',
+    loadComponent: () =>
+      import('./component/skill/skill.component').then(m => m.SkillComponent)
+  },
+  {
+    path: 'project',
+    loadComponent: () =>
+      import('./component/project/project.component').then(m => m.ProjectComponent)
+  },
+  {
     path: 'contact',
     loadComponent: () =>
       import('./component/contact/contact.component').then(m => m.ContactComponent)
   },
   {
-    path: 'about',
+    path: 'admin',
     loadComponent: () =>
-      import('./component/about/about.component').then(m => m.AboutComponent)
+      import('./component/admin/admin.component').then(m => m.AdminComponent)
   }
 ]

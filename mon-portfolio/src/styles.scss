@@ -1,9 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-* {
-    margin: 0;
-    padding: 0;
-}
+@use "./app/media/body.media.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+$bodyPage : 0 4% 0 11%;
 
 body{
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(9, 9, 11);
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+    margin-left: 11%;
 }

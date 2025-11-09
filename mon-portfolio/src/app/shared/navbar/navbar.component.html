@@ -1,33 +1,18 @@
-<nav class="navigation">
-    <div class="navigation-img">
-        <img class="navigation-img-logo_html" src="html.png" alt="">
-        <img class="navigation-img-logo navigation-img-logo_css" src="css.png" alt="">
-        <img class="navigation-img-logo navigation-img-logo_js" src="js.png" alt="">
-    </div>
-
-    <div class="navigation-name">
-        <span class="navigation-name_first">L</span>
-        <span class="navigation-name_second">u</span>
-        <span class="navigation-name_third">c</span>
-        <span class="navigation-name_fourth">a</span>
-        <span class="navigation-name_fifth">s</span>
-        <div class="navigation-name_point"><div class="navigation-name_point_jump">.</div></div>J
-    </div>
-
-    <div class="navigation-link">
-        <a class="navigation-link_option" [class.selected]="page === ''" routerLink="/" routerLink="">Accueil</a>
-        <a class="navigation-link_option" [class.selected]="page === 'about'" routerLink="/about">A propos</a>
-        <a class="navigation-link_option" href="">Compétences</a>
-        <a class="navigation-link_option" href="">Projets</a>
-        <a class="navigation-link_option" [class.selected]="page === 'contact'" routerLink="/contact">Contact</a>
-        <div class="navigation-link-dossier">
-            <button class="navigation-link-dossier_document">
-                <extranet-svg-menu />
-                Mes documents
-            </button>
-            <button class="navigation-link-dossier_theme"><extranet-svg-theme /></button>
+<nav class="extranet-navbar" [class.extranet-nav]="isShow">
+    <div class="extranet-navbar-container">
+        <div class="extranet-navbar-container-head">
+            <span class="extranet-navbar-container-head_title">Portfolio</span>
+            <span class="extranet-navbar-container-head_subtitle">Développeur Fullstack</span>
         </div>
-    </div>        
+
+        <ul class="extranet-navbar-container-element">
+            <li routerLink="/" class="extranet-navbar-container-element_li" [class.extranet-navbar_selected]="page == '/'"><extranet-svg-profil /><span>À propos</span></li>
+            <li routerLink="/skill" class="extranet-navbar-container-element_li" [class.extranet-navbar_selected]="page == '/skill'"><extranet-svg-skill /><span>Compétences</span></li>
+            <li routerLink="/project" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/project'"><extranet-svg-project /><span>Projet</span></li>
+            <li routerLink="/contact" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/contact'"><extranet-svg-contact /><span>Contact</span></li>
+            <li routerLink="/admin" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/admin'"><extranet-svg-admin /><span>Admin</span></li>
+        </ul>
+    </div>
 </nav>
 
-<div class="space"></div>
+<div class="extranet-nav-menu" (click)="showNavBar()"></div>
