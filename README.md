@@ -1,1 +1,1 @@
-https://lucas-josephh.github.io/portfolio/project
+https://lucas-josephh.github.io/portfolio
