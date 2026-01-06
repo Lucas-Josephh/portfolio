@@ -35,6 +35,6 @@ Il permet de présenter mes **projets**, **compétences**, et **expériences** d
 <img width="1896" height="893" alt="image" src="https://github.com/user-attachments/assets/c6be8b28-fe5b-42fa-a066-2165a8dc160a" />
 
 
-**Lien en ligne :** https://lucas-josephh.github.io/portfolio/
+**Lien en ligne :** https://lucas-josephh.github.io/portfolio
 
 ---
