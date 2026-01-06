@@ -1,27 +1,105 @@
-https://lucas-josephh.github.io/portfolio
+✨ Description
 
-## API Node.js + PostgreSQL
+Bienvenue sur mon portfolio web personnel !
+Ce projet est développé avec Angular pour le front-end et Node.js/Express pour le back-end.
+Il présente mes projets, compétences, et expériences professionnelles de manière moderne et interactive.
 
-Un serveur Express + Postgres est disponible dans `server/` pour alimenter le front.
+Fonctionnalités
 
-### Démarrage
-- `cd server`
-- `npm install`
-- Créez la base `portfolio` (ou autre) dans Postgres
-- Exécutez le script `schema.sql` pour créer/peupler les tables
-- Exportez `DATABASE_URL` (ou ajoutez-le dans un `.env`) puis `npm start` (http://localhost:3000)
+🖥️ Affichage des projets avec description et liens vers les démos/codes sources
 
-Variables attendues :
-- `DATABASE_URL=postgresql://user:password@host:5432/portfolio`
-- `PORT=3000` (optionnel)
-- `PGSSL=false` (mettez `true` si l’hébergeur impose SSL)
+📬 Formulaire de contact fonctionnel (envoi via le serveur Express)
 
-### Endpoints
-- `GET /getData?table=project|skill[&id=1]`
-- `POST /addData` body `{ table, data }`
-- `PUT /updateData` body `{ table, id, data }`
-- `DELETE /deleteData` body `{ table, id }`
+📱 Design responsive pour tous les appareils
 
-Tables :
-- `project`: `id_project`, `title`, `status`, `description`, `url`, `technologie` (text[]), `demo`, `github`
-- `skill`: `id_skill`, `name`, `categorie` (Frontend|Backend|DevOps|Autre|Base de données), `level` (0-100)
+⚡ Navigation fluide et animations simples
+
+🔗 API REST pour la gestion des données
+
+🚀 Technologies utilisées
+
+Front-end : Angular, TypeScript, HTML, CSS/SCSS
+
+Back-end : Node.js, Express.js
+
+Outils : npm, Angular CLI, Postman (tests API)
+
+🎬 Démonstration
+
+
+Lien en ligne : https://ton-portfolio.com
+ (remplace par ton URL réelle)
+
+🛠️ Installation
+Prérequis
+
+Node.js ≥ 18
+
+npm ≥ 9
+
+Étapes
+
+Cloner le dépôt
+
+git clone https://github.com/ton-username/portfolio.git
+cd portfolio
+
+
+Installer les dépendances du back-end
+
+cd backend
+npm install
+
+
+Installer les dépendances du front-end
+
+cd ../frontend
+npm install
+
+▶️ Lancement du projet
+Back-end (Express)
+cd backend
+npm start
+
+
+Serveur disponible sur http://localhost:3000
+
+Front-end (Angular)
+cd frontend
+ng serve
+
+
+Application Angular disponible sur http://localhost:4200
+
+⚠️ Assurez-vous que le serveur back-end tourne avant de lancer le front-end.
+
+📂 Structure du projet
+portfolio/
+├─ backend/          # Serveur Node.js/Express
+│  ├─ routes/        # Routes API
+│  ├─ controllers/   # Logique des routes
+│  ├─ models/        # Modèles de données
+│  └─ app.js         # Fichier principal du serveur
+├─ frontend/         # Application Angular
+│  ├─ src/
+│  ├─ angular.json
+│  └─ package.json
+└─ README.md
+
+🤝 Contribution
+
+Les contributions sont les bienvenues !
+
+Fork le projet
+
+Crée une branche feature (git checkout -b feature/nom-feature)
+
+Commit tes modifications (git commit -m 'Ajout de ...')
+
+Push la branche (git push origin feature/nom-feature)
+
+Ouvre une Pull Request
+
+📜 Licence
+
+Ce projet est sous licence MIT – voir le fichier LICENSE pour plus de détails.
