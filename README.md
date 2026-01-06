@@ -3,7 +3,6 @@
 [![Portfolio Badge](https://img.shields.io/badge/Portfolio-Angular-red?style=flat-square)](https://angular.io/)
 [![Node.js](https://img.shields.io/badge/Node.js-green?style=flat-square)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express.js-black?style=flat-square)](https://expressjs.com/)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
 ---
 
