@@ -39,17 +39,3 @@ Il permet de présenter mes **projets**, **compétences**, et **expériences** d
 *(Remplacez par votre URL réelle si déployée)*
 
 ---
-
-## 🛠️ Installation
-
-### Prérequis
-
-- Node.js ≥ 18  
-- npm ≥ 9  
-
-### Étapes
-
-1. Cloner le dépôt
-```bash
-git clone https://github.com/ton-username/portfolio.git
-cd portfolio
