@@ -33,7 +33,7 @@ Il permet de présenter mes **projets**, **compétences**, et **expériences** d
 
 ## 🎬 Démonstration
 
-![Screenshot du portfolio](https://via.placeholder.com/800x400?text=Portfolio+Screenshot)
+![Screenshot du portfolio](<img width="1896" height="893" alt="image" src="https://github.com/user-attachments/assets/8aaf852d-ee7a-42db-8233-5a51ae68062a" />)
 
 **Lien en ligne :** [https://ton-portfolio.com](https://ton-portfolio.com)  
 *(Remplacez par votre URL réelle si déployée)*
