@@ -8,7 +8,7 @@ Fonctionnalités
 
 🖥️ Affichage des projets avec description et liens vers les démos/codes sources
 
-📬 Formulaire de contact fonctionnel (envoi via le serveur Express)
+📬 Formulaire de contact fonctionnel (envoi via l'API EmailJs)
 
 📱 Design responsive pour tous les appareils
 
@@ -22,7 +22,7 @@ Front-end : Angular, TypeScript, HTML, CSS/SCSS
 
 Back-end : Node.js, Express.js
 
-Outils : npm, Angular CLI, Postman (tests API)
+Outils : npm, Angular CLI
 
 🎬 Démonstration
 
