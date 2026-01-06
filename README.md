@@ -1,105 +1,55 @@
-✨ Description
+# 🌐 Portfolio Personnel – Angular & Node.js/Express
 
-Bienvenue sur mon portfolio web personnel !
-Ce projet est développé avec Angular pour le front-end et Node.js/Express pour le back-end.
-Il présente mes projets, compétences, et expériences professionnelles de manière moderne et interactive.
+[![Portfolio Badge](https://img.shields.io/badge/Portfolio-Angular-red?style=flat-square)](https://angular.io/)
+[![Node.js](https://img.shields.io/badge/Node.js-green?style=flat-square)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-black?style=flat-square)](https://expressjs.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
-Fonctionnalités
+---
 
-🖥️ Affichage des projets avec description et liens vers les démos/codes sources
+## ✨ Description
 
-📬 Formulaire de contact fonctionnel (envoi via l'API EmailJs)
+Bienvenue sur mon **portfolio web personnel** !  
+Ce projet est développé avec **Angular** pour le front-end et **Node.js/Express** pour le back-end.  
+Il permet de présenter mes **projets**, **compétences**, et **expériences** de manière moderne et interactive.
 
-📱 Design responsive pour tous les appareils
+### Fonctionnalités
 
-⚡ Navigation fluide et animations simples
+- 🖥️ Affichage des projets avec descriptions et liens vers les démos/codes sources  
+- 📬 Formulaire de contact fonctionnel via le serveur Express  
+- 📱 Design responsive pour tous les appareils  
+- ⚡ Navigation fluide et animations simples  
+- 🔗 API REST pour la gestion des données  
 
-🔗 API REST pour la gestion des données
+---
 
-🚀 Technologies utilisées
+## 🚀 Technologies utilisées
 
-Front-end : Angular, TypeScript, HTML, CSS/SCSS
+| Front-end | Back-end | Outils |
+|-----------|----------|-------|
+| Angular, TypeScript, HTML, CSS/SCSS | Node.js, Express.js | npm, Angular CLI, Postman |
 
-Back-end : Node.js, Express.js
+---
 
-Outils : npm, Angular CLI
+## 🎬 Démonstration
 
-🎬 Démonstration
+![Screenshot du portfolio](https://via.placeholder.com/800x400?text=Portfolio+Screenshot)
 
+**Lien en ligne :** [https://ton-portfolio.com](https://ton-portfolio.com)  
+*(Remplacez par votre URL réelle si déployée)*
 
-Lien en ligne : https://ton-portfolio.com
- (remplace par ton URL réelle)
+---
 
-🛠️ Installation
-Prérequis
+## 🛠️ Installation
 
-Node.js ≥ 18
+### Prérequis
 
-npm ≥ 9
+- Node.js ≥ 18  
+- npm ≥ 9  
 
-Étapes
+### Étapes
 
-Cloner le dépôt
-
+1. Cloner le dépôt
+```bash
 git clone https://github.com/ton-username/portfolio.git
 cd portfolio
-
-
-Installer les dépendances du back-end
-
-cd backend
-npm install
-
-
-Installer les dépendances du front-end
-
-cd ../frontend
-npm install
-
-▶️ Lancement du projet
-Back-end (Express)
-cd backend
-npm start
-
-
-Serveur disponible sur http://localhost:3000
-
-Front-end (Angular)
-cd frontend
-ng serve
-
-
-Application Angular disponible sur http://localhost:4200
-
-⚠️ Assurez-vous que le serveur back-end tourne avant de lancer le front-end.
-
-📂 Structure du projet
-portfolio/
-├─ backend/          # Serveur Node.js/Express
-│  ├─ routes/        # Routes API
-│  ├─ controllers/   # Logique des routes
-│  ├─ models/        # Modèles de données
-│  └─ app.js         # Fichier principal du serveur
-├─ frontend/         # Application Angular
-│  ├─ src/
-│  ├─ angular.json
-│  └─ package.json
-└─ README.md
-
-🤝 Contribution
-
-Les contributions sont les bienvenues !
-
-Fork le projet
-
-Crée une branche feature (git checkout -b feature/nom-feature)
-
-Commit tes modifications (git commit -m 'Ajout de ...')
-
-Push la branche (git push origin feature/nom-feature)
-
-Ouvre une Pull Request
-
-📜 Licence
-
-Ce projet est sous licence MIT – voir le fichier LICENSE pour plus de détails.
