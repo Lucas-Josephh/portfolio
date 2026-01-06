@@ -1,0 +1,112 @@
+@use "../../../var.scss" as var;
+@use "../../../styles.scss" as style;
+@use "../../media/navbar.media.scss";
+@use "../../media/project.media.scss";
+
+.app-project {
+    margin: style.$bodyPage;
+    
+    &-title {
+        color: white;
+        font-size: clamp(1.9rem, 5vw, 3rem);
+        margin-bottom: 8px;
+        margin-top: 5%;
+
+        &_text {
+            background: linear-gradient(135deg, rgb(34, 211, 238), rgb(168, 84, 247));
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+
+    &_subtitle {
+        margin: 0;
+        font-size: 20px;
+        margin-bottom: 40px;
+        color: var.$color-gray;
+        font-weight: normal;
+    }
+
+    &-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+        gap: 16px;
+    }
+
+    &-container {
+        display: grid;
+        gap: 26px;
+        padding-top: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-auto-rows: 1fr;
+
+        &-option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: max-content;
+            height: 26px;
+            padding: 4px;
+            border-radius: 8px;
+            background-color: var.$background-element;
+            border: var.$border-blue;
+            
+            &_btn {
+                border: none;
+                width: max-content;
+                font-weight: bold;
+                height: 100%;
+                padding-left: 12px;
+                padding-right: 12px;
+                border-radius: 4px;
+                color: var.$color-gray;
+                background-color: transparent;
+                cursor: pointer;
+            }
+
+            &_all {
+                background-color: rgba(0, 157, 181, 0.2);
+                color: rgb(34, 211, 238);
+            }
+
+            &_finish {
+                background-color: rgba(0, 164, 0, 0.2);
+                color: rgb(53, 255, 53);
+            }
+
+            &_progress {
+                background-color: rgba(160, 0, 160, 0.2);
+                color: rgb(255, 128, 255);
+            }
+        }
+    }
+
+    &-page {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &_btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            font-size: 18px;
+            border: var.$border-blue;
+            background-color: var.$background-element;
+            outline: none;
+            font-weight: bold;
+            color: rgb(34, 211, 238);
+        }
+
+        &--top {
+            justify-content: flex-start;
+        }
+
+        &_info {
+            font-size: 14px;
+            color: var.$color-gray;
+        }
+    }
+}

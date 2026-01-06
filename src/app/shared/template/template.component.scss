@@ -1,0 +1,106 @@
+@use '../../../var.scss' as var;
+
+.extranet-template {
+    overflow: hidden;
+    gap: 16px;
+    border-radius: 8px;
+    width: 100%;
+    border: var.$border-blue;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &-img-wrapper {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        background-color: var.$color-gray;
+    }
+
+    &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &-img-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at top left, rgba(34, 211, 238, 0.35), rgba(15, 23, 42, 1));
+
+        &_icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px dashed rgba(148, 163, 184, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            color: rgba(226, 232, 240, 0.9);
+            font-size: 20px;
+        }
+
+        &_text {
+            font-size: 13px;
+            color: rgba(226, 232, 240, 0.85);
+        }
+    }
+
+    &-status {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 20px;
+        flex: 1;
+
+        &_title {
+            color: rgb(34, 211, 238);
+            margin-bottom: 0;
+            margin-top: 10px;
+            font-size: 22px;
+        }
+
+        &_description {
+            color: var.$color-gray;
+            margin: .5rem 0 1rem;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            flex: 1;
+        }
+
+        &-btn {
+            display: flex;
+            gap: 12px;
+            margin-top: 14px;
+
+            &_redirect {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                outline: none;
+                border: none;
+                background-color: white;
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+                width: 100%;
+                height: 30px;
+                border-radius: 6px;
+            }
+        }
+    }
+}

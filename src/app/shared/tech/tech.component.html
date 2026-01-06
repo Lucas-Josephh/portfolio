@@ -1,0 +1,9 @@
+<div class="extranet-tech-list">
+    @if(items.length === 0) {
+        <div class="extranet-tech">-</div>
+    } @else {
+        @for(item of items; track $index) {
+            <div class="extranet-tech">{{item}}</div>
+        }
+    }
+</div>
