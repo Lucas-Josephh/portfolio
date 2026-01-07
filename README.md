@@ -1,27 +1,40 @@
-https://lucas-josephh.github.io/portfolio
+# 🌐 Portfolio Personnel – Angular & Node.js/Express
 
-## API Node.js + PostgreSQL
+[![Portfolio Badge](https://img.shields.io/badge/Portfolio-Angular-red?style=flat-square)](https://angular.io/)
+[![Node.js](https://img.shields.io/badge/Node.js-green?style=flat-square)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-black?style=flat-square)](https://expressjs.com/)
 
-Un serveur Express + Postgres est disponible dans `server/` pour alimenter le front.
+---
 
-### Démarrage
-- `cd server`
-- `npm install`
-- Créez la base `portfolio` (ou autre) dans Postgres
-- Exécutez le script `schema.sql` pour créer/peupler les tables
-- Exportez `DATABASE_URL` (ou ajoutez-le dans un `.env`) puis `npm start` (http://localhost:3000)
+## ✨ Description
 
-Variables attendues :
-- `DATABASE_URL=postgresql://user:password@host:5432/portfolio`
-- `PORT=3000` (optionnel)
-- `PGSSL=false` (mettez `true` si l’hébergeur impose SSL)
+Bienvenue sur mon **portfolio web personnel** !  
+Ce projet est développé avec **Angular** pour le front-end et **Node.js/Express** pour le back-end.  
+Il permet de présenter mes **projets**, **compétences**, et **expériences** de manière moderne et interactive.
 
-### Endpoints
-- `GET /getData?table=project|skill[&id=1]`
-- `POST /addData` body `{ table, data }`
-- `PUT /updateData` body `{ table, id, data }`
-- `DELETE /deleteData` body `{ table, id }`
+### Fonctionnalités
 
-Tables :
-- `project`: `id_project`, `title`, `status`, `description`, `url`, `technologie` (text[]), `demo`, `github`
-- `skill`: `id_skill`, `name`, `categorie` (Frontend|Backend|DevOps|Autre|Base de données), `level` (0-100)
+- 🖥️ Affichage des projets avec descriptions et liens vers les démos/codes sources  
+- 📬 Formulaire de contact fonctionnel via le serveur Express  
+- 📱 Design responsive pour tous les appareils  
+- ⚡ Navigation fluide et animations simples  
+- 🔗 API REST pour la gestion des données  
+
+---
+
+## 🚀 Technologies utilisées
+
+| Front-end | Back-end | Outils |
+|-----------|----------|-------|
+| Angular, TypeScript, HTML, CSS/SCSS | Node.js, Express.js | npm, Angular CLI, Postman |
+
+---
+
+## 🎬 Démonstration
+
+<img width="1896" height="893" alt="image" src="https://github.com/user-attachments/assets/c6be8b28-fe5b-42fa-a066-2165a8dc160a" />
+
+
+**Lien en ligne :** https://lucas-josephh.github.io/portfolio
+
+---
