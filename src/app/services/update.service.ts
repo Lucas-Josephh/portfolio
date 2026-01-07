@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class UpdateDataService {
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = 'https://portfolio-back-ruddy.vercel.app';
 
   constructor(private http: HttpClient) {}
 

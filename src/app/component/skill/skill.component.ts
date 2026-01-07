@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { NoteComponent } from '../../shared/note/note.component';
-import { SkillSVGComponent } from '../../shared/svg/skill/skill.component';
 import { GetDataService } from '../../services/recover.service';
 import { CategorieEnum } from '../../environment/categorie.const';
 import { FrontSVGComponent } from '../../shared/svg/front/front.component';
@@ -12,7 +11,7 @@ import { OtherSVGComponent } from '../../shared/svg/other/other.component';
 
 @Component({
   selector: 'app-skill',
-  imports: [NavbarComponent, NoteComponent, SkillSVGComponent, FrontSVGComponent, BackSVGComponent, BddSVGComponent, DevSVGComponent, OtherSVGComponent],
+  imports: [NavbarComponent, NoteComponent, FrontSVGComponent, BackSVGComponent, BddSVGComponent, DevSVGComponent, OtherSVGComponent],
   standalone: true,
   templateUrl: './skill.component.html',
   styleUrls: ['./skill.component.scss']

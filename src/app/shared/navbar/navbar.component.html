@@ -10,9 +10,27 @@
             <li routerLink="/skill" class="extranet-navbar-container-element_li" [class.extranet-navbar_selected]="page == '/skill'"><extranet-svg-skill /><span>Compétences</span></li>
             <li routerLink="/project" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/project'"><extranet-svg-project /><span>Projet</span></li>
             <li routerLink="/contact" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/contact'"><extranet-svg-contact /><span>Contact</span></li>
-            <li routerLink="/admin" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/admin'"><extranet-svg-admin /><span>Admin</span></li>
+            <!----<li routerLink="/admin" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/admin'"><extranet-svg-admin /><span>Admin</span></li>-->
+            <li  (click)="securityPass()" class="extranet-navbar-container-element_li_prj" [class.extranet-navbar_selected]="page == '/admin'"><extranet-svg-admin /><span>Admin</span></li>
         </ul>
     </div>
 </nav>
+
+@if (isShowSecurity) {
+    <div class="extranet-nav-security">
+        <form class="extranet-nav-security-form" [formGroup]="mdpForm">
+            @if(isNewMDP) {
+                <label class="extranet-nav-security-form_label" for="new_mdp">Définir un nouveau mot de passe</label>
+                <input class="extranet-nav-security-form_input" type="password" id="new_mdp" formControlName="newmdp" placeholder="Ex: motdepasse" required />
+                <button class="extranet-nav-security-form_btn" type="button" (click)="addNewMDP($event)">Définir</button>
+            } @else {
+                <label class="extranet-nav-security-form_label" for="mdp">Mot de passe</label>
+                <input class="extranet-nav-security-form_input" type="password" id="mdp" formControlName="mdp" placeholder="Ex: motdepasse" required />
+                <button class="extranet-nav-security-form_btn" type="button" (click)="checkMDP($event)">Vérifier</button>
+            }
+        </form>
+    </div>
+    <div class="extranet-nav-filtre" (click)="securityPass()"></div>
+}
 
 <div class="extranet-nav-menu" (click)="showNavBar()"></div>

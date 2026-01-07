@@ -4,12 +4,12 @@ import { Observable } from 'rxjs';
 
 
 @Injectable({ providedIn: 'root' })
-export class AddDataService {
+export class HashPasswordService {
   private baseUrl = 'https://portfolio-back-ruddy.vercel.app';
 
   constructor(private http: HttpClient) {}
 
-  addData(data: [any], table: string): Observable<[]> {
-    return this.http.post<[]>(`${this.baseUrl}/addData`, {data, table});
-  }
+  hashPass(password: string): Observable<{exists: boolean}> {
+    return this.http.post<{exists: boolean}>(`${this.baseUrl}/hash`, { password });
+  }  
 }

@@ -86,7 +86,6 @@ export class DataProject implements OnInit{
 
   actionProject(): void {
     if (this.projectForm.valid) {
-      // s'assurer que la liste des technos est bien envoyée
       this.projectForm.patchValue({ technologie: this.technologies });
 
       if(!this.update) {

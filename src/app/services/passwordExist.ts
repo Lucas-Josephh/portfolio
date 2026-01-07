@@ -4,12 +4,12 @@ import { Observable } from 'rxjs';
 
 
 @Injectable({ providedIn: 'root' })
-export class AddDataService {
+export class PasswordExistService {
   private baseUrl = 'https://portfolio-back-ruddy.vercel.app';
 
   constructor(private http: HttpClient) {}
 
-  addData(data: [any], table: string): Observable<[]> {
-    return this.http.post<[]>(`${this.baseUrl}/addData`, {data, table});
+  passExist(): Observable<{ exists: boolean }> {
+    return this.http.get<{ exists: boolean }>(`${this.baseUrl}/passExist`);
   }
 }
